@@ -10,6 +10,7 @@ from django.views.static import serve
 
 urlpatterns =[
     path('',inicio,name='inicio'),
+    #path('refresh/',refresh,name='refresh'),
     path('delete/<id>',delete,name='delete'),
     #path('inicio_za/',inicio_za,name='inicio_za'),
     path('inicio_mascaro/',inicio_mascaro,name='inicio_mascaro'),

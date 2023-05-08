@@ -9,6 +9,30 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 
+'''def refresh(request):
+    queryset = request.GET.get('buscar')
+    queryset2 = request.GET.get('direccion')
+   
+    if queryset: 
+        clientes= datos_propiedad_model.objects.filter(dueño = True)
+        clientes= datos_propiedad_model.objects.filter(
+          Q(tipo__icontains = queryset) |
+          Q(direccion__icontains = queryset) |
+          Q(localidad__icontains = queryset) |
+          Q(propiedad__icontains = queryset) |
+          Q(estado__icontains = queryset) |
+          Q(tipo__icontains = queryset) |
+          Q(precio__icontains = queryset) |
+          Q(tipo__icontains = queryset) |
+          Q(dueño__icontains = queryset)
+        ).distinct()
+    elif queryset2:
+      clientes =  datos_propiedad_model.objects.all().order_by('dueño')
+      print('entra')
+    
+      
+      return render (request,'bd_app/inicio.html',{'clientes':clientes})
+'''
 def inicio (request):
     queryset = request.GET.get('buscar')
     queryset2 = request.GET.get('direccion')
