@@ -120,13 +120,6 @@ main .main__container .database nav {
     
 }
 
-.btn_refresh a{
-    text-decoration: none;
-    color: rgb(60, 0, 255);
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 700; 
-}
-
 
 
 .btn_crear_nuevo{
@@ -146,12 +139,7 @@ main .main__container .database nav {
     font-family: "Font Awesome 5 Free"; 
     font-weight: 700; 
 }
-.btn_crear_nuevo a{
-    text-decoration: none;
-    color: white;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 700; 
-}
+
 
 
 
@@ -340,14 +328,15 @@ th{
 
     color: #282828;
     text-decoration: none;
- 
+    transition: 2s;
+    opacity: 1;
     
 }
 
 
 .menu__horizontal >li:hover{
     transition: 1s;
-
+    opacity: 0.5;
 
     text-decoration:none;
 }
