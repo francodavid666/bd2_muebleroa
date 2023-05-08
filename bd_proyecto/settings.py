@@ -30,6 +30,7 @@ DEBUG ='RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']]
 
 #MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 # Application definition
