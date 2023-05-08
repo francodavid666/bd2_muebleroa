@@ -10,7 +10,7 @@
 
 <form class ="form_datos" action="{% url 'form_edit' id %}"  method = "POST">{% csrf_token %}
 
-    
+  {% csrf_token %}
 
     <section class ="personales">
 
@@ -50,7 +50,7 @@
         </section>
 
           <section class ="form_catastrales">
-            
+            {% csrf_token %}
             <div class="form-group">
                 <label><p>Descripcion:</p> </label>
                 {{ form.descripcion }}
@@ -97,7 +97,7 @@
 
 
         <section class ="form_caracteristicas">
-
+          {% csrf_token %}
        
           <div class="form-group">
             <label><p>Ambientes:</p> </label>
