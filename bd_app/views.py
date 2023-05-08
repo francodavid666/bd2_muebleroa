@@ -5,6 +5,8 @@ from bd_app.forms import *
 from django import forms
 from django.db.models import Q
 # Create your views here.
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
 def inicio (request):
@@ -617,7 +619,7 @@ def inicio_masbarato (request):
 #PROPIEDADES    
 
 
-
+@csrf_exempt
 def form_edit(request,id):
   propiedad= datos_propiedad_model.objects.get(id=id)
   if request.method == 'POST':
@@ -706,7 +708,7 @@ def delete(request,id):
   
   
   #form_add
-  
+@csrf_exempt
 def form_add(request):
       if request.method=='POST':
                   formulario = datos_propiedad_form(request.POST,request.FILES)
