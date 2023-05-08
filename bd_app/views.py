@@ -511,7 +511,7 @@ def inicio_caracteristicas(request):
   
   
       clientes = datos_propiedad_model.objects.all()
-      return render (request,'bd_app/filtros/inicio_caracteristicas.html',{'clientes':clientes})
+      return render (request,'bd_app/inicio_caracteristicas.html',{'clientes':clientes})
 
 def inicio_refresh(request):
   
@@ -804,3 +804,249 @@ def form_add(request):
       return render (request,'bd_app/form_add.html',{'form':form})
 
   
+
+
+#CATASTRALES
+
+#DUEÑO
+#DUEÑO
+#DUEÑO
+#DUEÑO
+
+def catastrales_dueño_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('dueño')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(dueño = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(dueño__icontains = queryset) 
+            ).distinct().order_by('dueño')
+      return render (request,'bd_app/filtros/catastrales/dueño/dueño_az.html',{'clientes':clientes})
+
+
+
+
+#DUEÑO DE Z A
+def catastrales_dueño_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-dueño')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(dueño = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(dueño__icontains = queryset) 
+            ).distinct().order_by('-dueño')
+      return render (request,'bd_app/filtros/catastrales/dueño/dueño_za.html',{'clientes':clientes})
+
+
+
+#LOCALIDAD
+#LOCALIDAD
+#LOCALIDAD
+#LOCALIDAD
+
+
+#DIRECCION DE A Z
+def catastrales_localidad_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('localidad')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(localidad = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(localidad__icontains = queryset) 
+            ).distinct().order_by('localidad')
+      return render (request,'bd_app/filtros/catastrales/localidad/localidad_az.html',{'clientes':clientes})
+  
+  
+
+
+#LOCALIDAD DE Z A
+def catastrales_localidad_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-localidad')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(localidad = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(localidad__icontains = queryset) 
+            ).distinct().order_by('-localidad')
+      return render (request,'bd_app/filtros/catastrales/localidad/localidad_za.html',{'clientes':clientes})
+    
+    
+
+
+
+#LOCALIDAD
+#LOCALIDAD
+#LOCALIDAD
+#LOCALIDAD
+
+
+
+
+#ESTADO
+#ESTADO
+#ESTADO
+#ESTADO
+
+#ESTADO DE A Z
+def catastrales_estado_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('estado')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(estado = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(estado__icontains = queryset) 
+            ).distinct().order_by('estado')
+      return render (request,'bd_app/filtros/catastrales/estado/estado_az.html',{'clientes':clientes})
+  
+  
+
+
+#ESTADO DE Z A
+def catastrales_estado_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-estado')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(estado = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(estado__icontains = queryset) 
+            ).distinct().order_by('-estado')
+      return render (request,'bd_app/filtros/catastrales/estado/estado_za.html',{'clientes':clientes})
+    
+
+
+#ESTADO
+#ESTADO
+#ESTADO
+#ESTADO
+
+
+
+#TIPO
+#TIPO
+#TIPO
+#TIPO
+
+#TIPO DE A Z
+def catastrales_tipo_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('tipo')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(tipo = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(tipo__icontains = queryset) 
+            ).distinct().order_by('tipo')
+      return render (request,'bd_app/filtros/catastrales/tipo/tipo_az.html',{'clientes':clientes})
+  
+  
+
+
+#TIPO DE Z A
+def catastrales_tipo_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-tipo')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(tipo = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(tipo__icontains = queryset) 
+            ).distinct().order_by('-tipo')
+      return render (request,'bd_app/filtros/catastrales/tipo/tipo_za.html',{'clientes':clientes})
+#TIPO
+#TIPO
+#TIPO
+#TIPO
+
+
+#PRECIO
+#PRECIO
+#PRECIO
+#PRECIO
+
+#PRECIO DE A Z
+def catastrales_precio_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('precio')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(precio = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(precio__icontains = queryset) 
+            ).distinct().order_by('precio')
+      return render (request,'bd_app/filtros/catastrales/precio/precio_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def catastrales_precio_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-precio')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(precio = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(precio__icontains = queryset) 
+            ).distinct().order_by('-precio')
+      return render (request,'bd_app/filtros/catastrales/precio/precio_za.html',{'clientes':clientes})
+
+#PRECIO
+#PRECIO
+#PRECIO
+#PRECIO

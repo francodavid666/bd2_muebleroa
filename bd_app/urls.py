@@ -53,7 +53,22 @@ urlpatterns =[
     
     path('descripcion_az/',descripcion_az,name='descripcion_az'),
     path('descripcion_za/',descripcion_za,name='descripcion_za'),
- 
+  #CATASTRALES
+    path('catastrales_dueño_az/',catastrales_dueño_az,name='catastrales_dueño_az'),
+    path('catastrales_dueño_za/',catastrales_dueño_za,name='catastrales_dueño_za'),
+    
+    path('catastrales_localidad_za/',catastrales_localidad_za,name='catastrales_localidad_za'),
+    path('catastrales_localidad_az/',catastrales_localidad_az,name='catastrales_localidad_az'),
+    
+    path('catastrales_estado_az/',catastrales_estado_az,name='catastrales_estado_az'),
+    path('catastrales_estado_za/',catastrales_estado_za,name='catastrales_estado_za'),
+    
+    path('catastrales_tipo_az/',catastrales_tipo_az,name='catastrales_tipo_az'),
+    path('catastrales_tipo_za/',catastrales_tipo_za,name='catastrales_tipo_za'),
+    
+    
+    path('catastrales_precio_az/',catastrales_precio_az,name='catastrales_precio_az'),
+    path('catastrales_precio_za/',catastrales_precio_za,name='catastrales_precio_za'),
 
 ]+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 
