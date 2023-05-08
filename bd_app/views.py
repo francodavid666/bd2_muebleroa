@@ -1050,3 +1050,372 @@ def catastrales_precio_za (request):
 #PRECIO
 #PRECIO
 #PRECIO
+
+
+#ABIENTE
+#ABIENTE
+#ABIENTE
+#ABIENTE
+
+def ambiente_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('ambientes')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(ambiente = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(ambiente__icontains = queryset) 
+            ).distinct().order_by('ambientes')
+      return render (request,'bd_app/filtros/catastrales/ambientes/ambiente_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def ambiente_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-ambientes')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(ambiente = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(ambiente__icontains = queryset) 
+            ).distinct().order_by('-ambientes')
+      return render (request,'bd_app/filtros/catastrales/ambientes/ambiente_za.html',{'clientes':clientes})
+
+#ABIENTE
+
+#ABIENTE
+#ABIENTE
+#ABIENTE
+
+#BAÑOS
+#BAÑOS
+#BAÑOS
+#BAÑOS
+def baños_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('baños')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(baños = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(baños__icontains = queryset) 
+            ).distinct().order_by('baños')
+      return render (request,'bd_app/filtros/catastrales/baños/baños_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def baños_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-baños')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(baños = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(baños__icontains = queryset) 
+            ).distinct().order_by('-baños')
+      return render (request,'bd_app/filtros/catastrales/baños/baños_za.html',{'clientes':clientes})
+
+
+#BAÑOS
+#BAÑOS
+#BAÑOS
+#BAÑOS
+
+
+#COCINA
+def cocina_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('cocina')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(cocina = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(cocina__icontains = queryset) 
+            ).distinct().order_by('cocina')
+      return render (request,'bd_app/filtros/catastrales/cocina/cocina_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def cocina_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('cocina')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(cocina = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(cocina__icontains = queryset) 
+            ).distinct().order_by('-cocina')
+      return render (request,'bd_app/filtros/catastrales/cocina/cocina_za.html',{'clientes':clientes})
+
+
+#COCINA
+
+#DOMITORIOS
+#DOMITORIOS
+#DOMITORIOS
+#DOMITORIOS
+#DOMITORIOS
+
+#COCINA
+def dormitorios_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('dormitorios')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(dormitorios = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(dormitorios__icontains = queryset) 
+            ).distinct().order_by('dormitorios')
+      return render (request,'bd_app/filtros/catastrales/dormitorios/dormitorios_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def dormitorios_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-dormitorios')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(dormitorios = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(dormitorios__icontains = queryset) 
+            ).distinct().order_by('-dormitorios')
+      return render (request,'bd_app/filtros/catastrales/dormitorios/dormitorios_za.html',{'clientes':clientes})
+
+
+
+#DOMITORIOS
+#DOMITORIOS
+#DOMITORIOS
+#DOMITORIOS
+
+#LIVING
+#LIVING
+#LIVING
+#LIVING
+
+def living_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('living')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(living = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(living__icontains = queryset) 
+            ).distinct().order_by('living')
+      return render (request,'bd_app/filtros/catastrales/living/living_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def living_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-living')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(living = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(living__icontains = queryset) 
+            ).distinct().order_by('-living')
+      return render (request,'bd_app/filtros/catastrales/living/living_za.html',{'clientes':clientes})
+
+#LIVING
+#LIVING
+#LIVING
+#LIVING
+
+#garage
+#garage
+#garage
+#garage
+
+def garage_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('garage')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(garage = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(garage__icontains = queryset) 
+            ).distinct().order_by('garage')
+      return render (request,'bd_app/filtros/catastrales/garage/garage_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def garage_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-garage')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(garage = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(garage__icontains = queryset) 
+            ).distinct().order_by('-garage')
+      return render (request,'bd_app/filtros/catastrales/garage/garage_za.html',{'clientes':clientes})
+
+
+#garage
+#garage
+#garage
+#garage
+
+
+#SOTANO
+#SOTANO
+#SOTANO
+#SOTANO
+def sotano_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('sotano')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(sotano = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(sotano__icontains = queryset) 
+            ).distinct().order_by('sotano')
+      return render (request,'bd_app/filtros/catastrales/sotano/sotano_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def sotano_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-sotano')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(sotano = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(sotano__icontains = queryset) 
+            ).distinct().order_by('-sotano')
+      return render (request,'bd_app/filtros/catastrales/sotano/sotano_za.html',{'clientes':clientes})
+
+#SOTANO
+#SOTANO
+#SOTANO
+#SOTANO
+
+#TERRASA
+#TERRASA
+#TERRASA
+#TERRASA
+def terrasa_az (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('terrasa')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(terrasa = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(terrasa__icontains = queryset) 
+            ).distinct().order_by('terrasa')
+      return render (request,'bd_app/filtros/catastrales/terrasa/terrasa_az.html',{'clientes':clientes})
+  
+  
+
+
+#PRECIO DE Z A
+def terrasa_za (request):
+  
+  
+  
+      queryset = request.GET.get('buscar')
+     
+  
+      clientes= datos_propiedad_model.objects.all().order_by('-terrasa')
+    
+      if queryset: 
+          clientes= datos_propiedad_model.objects.filter(terrasa = True)
+          clientes= datos_propiedad_model.objects.filter(
+            Q(terrasa__icontains = queryset) 
+            ).distinct().order_by('-terrasa')
+      return render (request,'bd_app/filtros/catastrales/terrasa/terrasa_za.html',{'clientes':clientes})
+
+#TERRASA
+#TERRASA
+#TERRASA
+#TERRASAD

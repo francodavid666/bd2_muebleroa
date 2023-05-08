@@ -2,8 +2,10 @@
 
 
 
+
+
 {% block titulo %}
-<h4 class="titulo_database">Database Busqueda por 'Tipo' A-Z</h4>
+<h4 class="titulo_database">Database Busqueda por 'Dueño' Z-A</h4>
 {% endblock %}
 
 
@@ -14,22 +16,18 @@
     <table>
        
         <thead>
-            <th> <a href="{% url 'catastrales_dueño_za' %}"> Dueño</th></a> 
-            <th ><a href="{% url 'catastrales_localidad_za' %}" >Localidad</th></a>
-            <th ><a href="{% url 'catastrales_estado_za' %}" >Estado</th></a>
-           <!-- <th ><a href="{% url 'propiedad_za' %}" >Propiedad</th></a>-->
-           <th ><a href="{% url 'catastrales_tipo_za' %}" >Tipo</th></a>
-
-            <th> <a href="{% url 'catastrales_precio_za' %}"> Precio</th></a>
-            <th> <a href="{% url 'ambiente_za' %}"> Ambientes</th></a>
-
-            <th> <a href="{% url 'baños_za' %}"> Baños</th></a>
-            <th> <a href="{% url 'cocina_za' %}"> Cocina</th></a>
-            <th> <a href="{% url 'dormitorios_za' %}"> Dormitorios</th></a>
-            <th> <a href="{% url 'living_za' %}"> Living</th></a>
-            <th> <a href="{% url 'garage_za' %}"> Garage</th></a>
-            <th> <a href="{% url 'sotano_za' %}"> Sotano</th></a>
-            <th> <a href="{% url 'terrasa_za' %}"> Terrasa</th></a>
+            <th> <a href="{% url 'dueño_az' %}"> Dueño</th></a>
+            <th ><a href="{% url 'direccion_az' %}" >Direccion</th></a>
+            <th ><a href="{% url 'localidad_az' %}" >Localidad</th></a>
+         
+            <th ><a href="{% url 'estado_az' %}" >Estado</th></a>
+            <th ><a href="{% url 'propiedad_az' %}" >Propiedad</th></a>
+            <th ><a href="{% url 'tipo_az' %}" >Tipo</th></a>
+            
+            <th> <a href="{% url 'precio_az' %}"> Precio</th></a>
+            <th ><a href="{% url 'descripcion_az' %}" >Descripcion</th></a>
+            <th ><a href="{% url 'inicio' %}" >Editar</th></a>
+            <th ><a href="{% url 'inicio' %}" >Eliminar</th></a>
         </thead>
 
         <tbody>

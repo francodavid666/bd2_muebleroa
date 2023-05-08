@@ -69,7 +69,33 @@ urlpatterns =[
     
     path('catastrales_precio_az/',catastrales_precio_az,name='catastrales_precio_az'),
     path('catastrales_precio_za/',catastrales_precio_za,name='catastrales_precio_za'),
+    
+    
+    path('ambiente_az/',ambiente_az,name='ambiente_az'),
+    path('ambiente_za/',ambiente_za,name='ambiente_za'),
 
+    path('baños_az/',baños_az,name='baños_az'),
+    path('baños_za/',baños_za,name='baños_za'),
+    
+    path('cocina_az/',cocina_az,name='cocina_az'),
+    path('cocina_za/',cocina_za,name='cocina_za'),
+    
+    
+    path('dormitorios_az/',dormitorios_az,name='dormitorios_az'),
+    path('dormitorios_za/',dormitorios_za,name='dormitorios_za'),
+    
+    path('living_az/',living_az,name='living_az'),
+    path('living_za/',living_za,name='living_za'),
+    
+    path('garage_az/',garage_az,name='garage_az'),
+    path('garage_za/',garage_za,name='garage_za'),
+    
+    path('sotano_az/',sotano_az,name='sotano_az'),
+    path('sotano_za/',sotano_za,name='sotano_za'),
+    
+    path('terrasa_az/',terrasa_az,name='terrasa_az'),
+    path('terrasa_za/',terrasa_za,name='terrasa_za'),
+    
 ]+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
