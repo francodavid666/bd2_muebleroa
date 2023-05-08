@@ -8,7 +8,7 @@
 
 {% block tabla %}
 
-<form class ="form_datos" action="{% url 'form_add' %}"  method = "POST">{% csrf_token %}
+<form class ="form_datos" action="{% url 'form_add' %}"  method = "post">{% csrf_token %}
 
   {% csrf_token %}
 
