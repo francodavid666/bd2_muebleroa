@@ -621,7 +621,7 @@ def inicio_masbarato (request):
 def form_edit(request,id):
   propiedad= datos_propiedad_model.objects.get(id=id)
   if request.method == 'POST':
-    form = datos_propiedad_form(request.POST)
+    form = datos_propiedad_form(request.POST,request.FILES)
     if form.is_valid():
       info = form.cleaned_data
       propiedad.dueño=info['dueño']
@@ -709,7 +709,7 @@ def delete(request,id):
   
 def form_add(request):
       if request.method=='POST':
-                  formulario = datos_propiedad_form(request.POST)
+                  formulario = datos_propiedad_form(request.POST,request.FILES)
                   if formulario.is_valid():
                         info=formulario.cleaned_data
                         dueño = info.get("dueño")
